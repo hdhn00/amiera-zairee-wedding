@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amiera & Zairee — Walimatulurus</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Alex+Brush&family=EB+Garamond:ital@0;1&family=Aref+Ruqaa:wght@400;700&family=Ibarra+Real+Nova:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- ============ OPENING COVER ============ -->
+<div class="cover" id="cover">
+  <div class="cover-half cover-half--left"></div>
+  <div class="cover-half cover-half--right"></div>
+  <div class="cover-content">
+    <p class="cover-eyebrow">WALIMATULURUS</p>
+    <button type="button" class="cover-seal" id="cover-btn">
+      <img class="cover-seal-img" src="assets/wax_seal.png" alt="">
+      <span class="cover-seal-initials" data-role="seal-initials">A&amp;Z</span>
+    </button>
+    <p class="cover-seal-hint">BUKA JEMPUTAN</p>
+  </div>
+</div>
+
+<div class="card">
+<audio id="bg-music" loop preload="none">
+  <source src="assets/song.mp3" type="audio/mpeg">
+</audio>
+<button type="button" class="music-toggle" id="music-toggle" aria-label="Toggle background music">
+  <span class="music-icon">♪</span>
+</button>
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <img class="hero-canva-img is-active" data-role="hero-bride" src="assets/hero_bride.jpg" alt="Amiera & Zairee — Walimatulurus, Sabtu 26 Disember 2026, 11 pagi, De Zahra Tudor Home, Sungai Buloh">
+  <img class="hero-canva-img" data-role="hero-groom" src="assets/hero_groom.jpg" alt="Zairee & Amiera — Walimatulurus, Sabtu 26 Disember 2026, 11 pagi, De Zahra Tudor Home, Sungai Buloh">
+</section>
+
+<!-- ============ INVITATION CARD (BACK) ============ -->
+<section class="invite reveal-fade">
+  <img class="invite-corner invite-corner--tl" src="assets/corner_top_left_v2.png" alt="">
+  <img class="invite-corner invite-corner--br" src="assets/corner_bottom_right.png" alt="">
+
+  <div class="invite-content">
+    <p class="greeting">ASSALAMUALAIKUM WBT &amp;<br>SALAM SEJAHTERA</p>
+    <hr class="rule">
+    <p class="parents" data-role="parents">SUHAIMI BIN SAPAR<br><span class="amp-small">&amp;</span><br>HASNORAINI BT. ABDULLAH</p>
+
+    <p class="formal-copy">Dengan segala hormatnya mempersilakan<br>
+      <strong>Dato / Datin / Tuan / Puan / Encik / Cik</strong><br>
+      ke majlis perkahwinan <span data-role="child-role">puteri</span> kesayangan kami</p>
+
+    <p class="script-name" data-role="script-a">Amiera Natasha</p>
+    <p class="pilihan">— dengan pilihan hatinya —</p>
+    <p class="script-name" data-role="script-b">Zairee Nazmi</p>
+
+    <hr class="rule rule--wide">
+
+    <div class="details-grid">
+      <div class="detail">
+        <span class="detail-label">TARIKH</span>
+        <span class="detail-value">Sabtu,<br>26 Disember 2026</span>
+      </div>
+      <div class="detail">
+        <span class="detail-label">WAKTU</span>
+        <span class="detail-value">11:00 pagi –<br>4:00 petang</span>
+      </div>
+    </div>
+
+    <hr class="rule">
+
+    <p class="detail-label" style="text-align:center;">TEMPAT</p>
+    <p class="venue-name">DE ZAHRA TUDOR HOME, SUNGAI BULOH</p>
+    <p class="venue-address">Sungai Buloh, Selangor</p>
+
+    <div class="map-buttons">
+      <a class="map-btn" href="https://maps.google.com/?q=De+Zahra+Tudor+Home+Sungai+Buloh" target="_blank" rel="noopener">📍 GOOGLE MAPS</a>
+      <a class="map-btn" href="https://waze.com/ul?q=De+Zahra+Tudor+Home+Sungai+Buloh" target="_blank" rel="noopener">🧭 WAZE</a>
+    </div>
+
+    <hr class="rule">
+    <p class="detail-label" style="text-align:center;">HUBUNGI</p>
+    <p class="contact-lines" data-role="contact"></p>
+  </div>
+</section>
+
+<!-- ============ COUNTDOWN ============ -->
+<section class="countdown-section reveal-fade">
+  <div class="divider-diamond"><svg class="divider-ornament" viewBox="0 0 44 20" width="30" height="14"><path d="M22 10 C17 2, 6 3, 3 10 C6 17, 17 18, 22 10 C27 2, 38 3, 41 10 C38 17, 27 18, 22 10 Z" fill="none" stroke="currentColor" stroke-width="1"/><circle cx="22" cy="10" r="1.6" fill="currentColor"/></svg></div>
+  <p class="detail-label">MENGHITUNG HARI</p>
+  <div class="countdown" id="countdown">
+    <div class="cd-block"><span class="cd-num" id="cd-days">--</span><span class="cd-label">HARI</span></div>
+    <span class="cd-dot">◇</span>
+    <div class="cd-block"><span class="cd-num" id="cd-hours">--</span><span class="cd-label">JAM</span></div>
+    <span class="cd-dot">◇</span>
+    <div class="cd-block"><span class="cd-num" id="cd-mins">--</span><span class="cd-label">MINIT</span></div>
+    <span class="cd-dot">◇</span>
+    <div class="cd-block"><span class="cd-num" id="cd-secs">--</span><span class="cd-label">SAAT</span></div>
+  </div>
+  <p class="script-tagline">menuju hari bahagia</p>
+  <div class="divider-diamond"><svg class="divider-ornament" viewBox="0 0 44 20" width="30" height="14"><path d="M22 10 C17 2, 6 3, 3 10 C6 17, 17 18, 22 10 C27 2, 38 3, 41 10 C38 17, 27 18, 22 10 Z" fill="none" stroke="currentColor" stroke-width="1"/><circle cx="22" cy="10" r="1.6" fill="currentColor"/></svg></div>
+</section>
+
+<!-- ============ ATUR CARA ============ -->
+<section class="atur-cara reveal">
+  <img class="section-sprig section-sprig--tr" src="assets/corner_top_left_v2.png" alt="">
+  <p class="detail-label">ATURCARA</p>
+  <h2 class="atur-title">Majlis</h2>
+  <div class="divider-diamond"><svg class="divider-ornament" viewBox="0 0 44 20" width="30" height="14"><path d="M22 10 C17 2, 6 3, 3 10 C6 17, 17 18, 22 10 C27 2, 38 3, 41 10 C38 17, 27 18, 22 10 Z" fill="none" stroke="currentColor" stroke-width="1"/><circle cx="22" cy="10" r="1.6" fill="currentColor"/></svg></div>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <span class="timeline-time">11:00</span>
+      <span class="timeline-dot"></span>
+      <span class="timeline-label">KETIBAAN TETAMU</span>
+    </div>
+    <div class="timeline-item">
+      <span class="timeline-time">12:00</span>
+      <span class="timeline-dot"></span>
+      <span class="timeline-label">KETIBAAN PENGANTIN</span>
+    </div>
+    <div class="timeline-item">
+      <span class="timeline-time">1:00</span>
+      <span class="timeline-dot"></span>
+      <span class="timeline-label">MAKAN BERADAB</span>
+    </div>
+    <div class="timeline-item timeline-item--last">
+      <span class="timeline-time">4:00</span>
+      <span class="timeline-dot"></span>
+      <span class="timeline-label">MAJLIS BERAKHIR</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RSVP ============ -->
+<section class="rsvp-section reveal">
+  <p class="detail-label">PENGESAHAN KEHADIRAN</p>
+  <h2 class="rsvp-title">RSVP</h2>
+  <p class="rsvp-copy">Kehadiran anda amat bermakna buat kami. Sila lengkapkan borang di bawah.</p>
+  <p class="rsvp-deadline">SILA BALAS SEBELUM 1 DISEMBER 2026</p>
+
+  <form id="rsvp-form" class="rsvp-form">
+    <label class="field-label" for="rsvp-name">FULL NAME · NAMA PENUH</label>
+    <input class="field-input" type="text" id="rsvp-name" name="name" placeholder="e.g. Nur Aisyah binti Ahmad" required>
+
+    <label class="field-label">ATTENDANCE · KEHADIRAN</label>
+    <div class="attendance-toggle" role="radiogroup">
+      <button type="button" class="attend-btn is-active" data-value="hadir">HADIR</button>
+      <button type="button" class="attend-btn" data-value="tidak">TIDAK HADIR</button>
+    </div>
+    <input type="hidden" id="rsvp-attendance" name="attendance" value="hadir">
+
+    <label class="field-label" for="rsvp-pax">TOTAL PAX · BILANGAN TETAMU</label>
+    <select class="field-input" id="rsvp-pax" name="pax">
+      <option value="1">1 orang</option>
+      <option value="2">2 orang</option>
+    </select>
+
+    <label class="field-label" for="rsvp-wishes">WISHES FOR THE COUPLE · UCAPAN</label>
+    <textarea class="field-input" id="rsvp-wishes" name="wishes" rows="3" placeholder="Tulis ucapan & doa anda di sini..."></textarea>
+
+    <button type="submit" class="submit-btn" id="rsvp-submit">HANTAR RSVP →</button>
+    <p class="form-status" id="form-status"></p>
+  </form>
+
+  <div class="wishes-board">
+    <p class="detail-label" style="text-align:center;">PAPAN UCAPAN</p>
+    <div class="wishes-stats">
+      <div class="stat"><span class="stat-num" id="stat-total">0</span><span class="stat-label">JUMLAH RSVP</span></div>
+      <div class="stat"><span class="stat-num" id="stat-hadir">0</span><span class="stat-label">PAX HADIR</span></div>
+      <div class="stat"><span class="stat-num" id="stat-tidak">0</span><span class="stat-label">TIDAK HADIR</span></div>
+    </div>
+    <p class="wishes-note">Ucapan yang dihantar akan dipaparkan kepada semua tetamu.</p>
+    <p class="wishes-cta">Jadilah yang pertama menghantar ucapan kepada pengantin.</p>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer reveal">
+  <p class="footer-names">
+    <span data-role="name-a">Amiera</span><span class="amp">&amp;</span><span data-role="name-b">Zairee</span>
+  </p>
+  <p class="footer-date">26 · 12 · 2026 — SUNGAI BULOH, SELANGOR</p>
+  <p class="footer-thanks">Terima kasih kerana meraikan kami</p>
+  <img class="footer-flower-bottom" src="assets/footer_flower.png" alt="">
+</footer>
+
+<script src="script.js"></script>
+</div>
+</body>
+</html>
