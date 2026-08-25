@@ -570,13 +570,16 @@ textarea.field-input{ resize:vertical; }
 .wishes-list {
   display: flex;
   flex-direction: column;
-  gap: 34px;
-  margin-top: 32px;
+  margin-top: 28px;
   text-align: left;
 }
 
 .wish-card {
-  padding: 0;
+  padding: 24px 0;
+}
+
+.wish-card + .wish-card {
+  border-top: 1px solid rgba(72, 29, 22, 0.18);
 }
 
 .wish-message {
