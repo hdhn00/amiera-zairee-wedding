@@ -85,16 +85,47 @@ function tickCountdown() {
 // ============================================================
 // 4. RSVP FORM
 // ============================================================
+// function setupAttendanceToggle() {
+//   const buttons = document.querySelectorAll(".attend-btn");
+//   const hiddenInput = document.getElementById("rsvp-attendance");
+//   buttons.forEach(btn => {
+//     btn.addEventListener("click", () => {
+//       buttons.forEach(b => b.classList.remove("is-active"));
+//       btn.classList.add("is-active");
+//       hiddenInput.value = btn.dataset.value;
+//     });
+//   });
+// }
+
 function setupAttendanceToggle() {
   const buttons = document.querySelectorAll(".attend-btn");
   const hiddenInput = document.getElementById("rsvp-attendance");
+  const paxField = document.getElementById("rsvp-pax");
+  const paxLabel = document.querySelector('label[for="rsvp-pax"]');
+
+  function updatePaxVisibility() {
+    const isHadir = hiddenInput.value === "hadir";
+
+    paxField.style.display = isHadir ? "" : "none";
+    paxLabel.style.display = isHadir ? "" : "none";
+
+    if (!isHadir) {
+      paxField.value = "1";
+    }
+  }
+
   buttons.forEach(btn => {
     btn.addEventListener("click", () => {
       buttons.forEach(b => b.classList.remove("is-active"));
       btn.classList.add("is-active");
+
       hiddenInput.value = btn.dataset.value;
+
+      updatePaxVisibility();
     });
   });
+
+  updatePaxVisibility();
 }
 
 async function fetchCounts() {
@@ -108,6 +139,40 @@ async function fetchCounts() {
   } catch (err) {
     console.warn("Could not load RSVP counts:", err);
   }
+}
+
+async function fetchWishes() {
+  try {
+    const res = await fetch(`${WORKER_URL}/wishes`);
+    if (!res.ok) return;
+
+    const wishes = await res.json();
+    const container = document.getElementById("wishes-list");
+
+    if (!wishes.length) {
+      container.innerHTML = "";
+      return;
+    }
+
+    container.innerHTML = wishes.map(item => `
+      <div class="wish-card">
+        <p class="wish-message">${escapeHtml(item.wishes)}</p>
+        <p class="wish-name">— ${escapeHtml(item.name)}</p>
+      </div>
+    `).join("");
+
+  } catch (err) {
+    console.warn("Could not load wishes:", err);
+  }
+}
+
+function escapeHtml(str) {
+  return String(str)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
 }
 
 function setupForm() {
@@ -224,6 +289,7 @@ document.addEventListener("DOMContentLoaded", () => {
   setupCover();
   setupScrollReveal();
   fetchCounts();
+  fetchWishes();
   tickCountdown();
   setInterval(tickCountdown, 1000);
 });

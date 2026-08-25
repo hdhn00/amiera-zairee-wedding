@@ -567,6 +567,37 @@ textarea.field-input{ resize:vertical; }
 .wishes-note{ font-size:0.85rem; color:#481d16; }
 .wishes-cta{ font-family:var(--font-italic); font-style:italic; color:#481d16; }
 
+.wishes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 24px;
+  text-align: left;
+}
+
+.wish-card {
+  padding: 18px;
+  border-top: 1px solid rgba(72,29,22,0.18);
+  border-bottom: 1px solid rgba(72,29,22,0.18);
+}
+
+.wish-message {
+  margin: 0 0 10px;
+  font-family: var(--font-italic);
+  font-style: italic;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #481d16;
+}
+
+.wish-name {
+  margin: 0;
+  text-align: right;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  color: #481d16;
+}
+
 /* ============ FOOTER ============ */
 .footer{
   position:relative;
