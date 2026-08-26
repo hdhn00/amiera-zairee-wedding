@@ -299,7 +299,8 @@ body.no-scroll{ overflow:hidden; height:100%; }
 .parents{ font-size:1.2rem; font-weight:700; letter-spacing:0.04em; margin:20px 0; overflow-wrap:break-word; }
 .amp-small{ font-family:'Ibarra Real Nova', serif; color:var(--maroon); font-size:1.2rem; font-weight:600; font-style:italic; }
 .formal-copy{ font-size:1rem; line-height:1.9; color:var(--maroon); }
-.formal-copy strong{ font-weight:600; display:block; margin:6px 0; color:var(--maroon); }
+/* .formal-copy strong{ font-weight:600; display:block; margin:6px 0; color:var(--maroon); } */
+.formal-copy strong{ font-weight:600; display:block; margin:4px 0 0; color:var(--maroon); }
 .script-name{
   font-family:'Ibarra Real Nova', serif;
   font-weight:600;
