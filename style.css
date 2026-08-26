@@ -575,6 +575,12 @@ textarea.field-input{ resize:vertical; }
   flex-direction: column;
   margin-top: 28px;
   text-align: left;
+    /* Scrollable wishes */
+  max-height: 320px;
+  overflow-y: auto;
+
+  /* Keep scrollbar from touching the content */
+  padding-right: 12px;
 }
 
 .wish-card {
@@ -582,7 +588,7 @@ textarea.field-input{ resize:vertical; }
 }
 
 .wish-card + .wish-card {
-  border-top: 1px solid rgba(72, 29, 22, 0.18);
+    border-top: 1px solid rgba(72, 29, 22, 0.18);
 }
 
 .wish-message {
