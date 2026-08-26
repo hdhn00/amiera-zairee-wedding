@@ -292,4 +292,6 @@ document.addEventListener("DOMContentLoaded", () => {
   fetchWishes();
   tickCountdown();
   setInterval(tickCountdown, 1000);
+  setInterval(fetchCounts, 30000);
+setInterval(fetchWishes, 30000);
 });
