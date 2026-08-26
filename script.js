@@ -209,7 +209,8 @@ function setupForm() {
       document.querySelectorAll(".attend-btn").forEach(b => b.classList.remove("is-active"));
       document.querySelector('.attend-btn[data-value="hadir"]').classList.add("is-active");
       document.getElementById("rsvp-attendance").value = "hadir";
-      fetchCounts();
+    fetchCounts();
+    fetchWishes();
     } catch (err) {
       status.textContent = "Maaf, ralat berlaku. Sila cuba lagi.";
       console.error(err);
