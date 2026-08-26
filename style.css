@@ -582,7 +582,22 @@ textarea.field-input{ resize:vertical; }
   /* Keep scrollbar from touching the content */
   padding-right: 12px;
 }
+.wishes-list::-webkit-scrollbar {
+  width: 6px;
+}
 
+.wishes-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.wishes-list::-webkit-scrollbar-thumb {
+  background: #481d16;
+  border-radius: 10px;
+}
+
+.wishes-list::-webkit-scrollbar-thumb:hover {
+  background: #361510;
+}
 .wish-card {
   padding: 24px 0;
 }
